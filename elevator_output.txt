@@ -1,0 +1,180 @@
+/*The things in () are for your reference. Will not be there in actual output file */
+
+Elevator A :
+0	1	goes up
+1	1	goes up
+2	1	goes up
+3	2	picks up passenger : 1
+4	2	stops
+5	2	goes up
+6	2	goes up
+7	2	goes up
+8	3	picks up passenger : 4
+9	3	picks up passenger : 5
+10	3	stops
+11	3	goes up
+12	3	goes up
+13	3	goes up
+14	4	goes up
+15	4	goes up
+16	5 	goes up
+17	5	goes up
+18	6	dropps off passenger : 1, picks up passenger : 7
+19 	6	stops
+20	6	goes up
+21	6	goes up
+22	6	goes up
+23	7	picks up passenger : 8  (Note that A is full here)
+24	7	stops
+25	7	goes up
+26	7	goes up
+27	7	goes up
+28	8	goes up
+29	8	goes up
+30	9	goes up
+31	9	goes up
+32	10	goes up
+33	10	goes up
+34	11	drops off passenger : 7 (won't accept passenger 11 because opposite direction)
+35	11	stops
+36	11	goes up
+37	11	goes up
+38	11	goes up
+39	12	goes up
+40	12	goes up
+41	13	drops off passenger : 4,8
+42	13	stops
+43	13	goes up
+44	13	goes up
+45	13	goes up
+46	14	goes up
+47	14	goes up
+48	15	drops off passenger : 5
+49	15	stops
+50	15	goes down (stops because passenger 11 has been picked up)
+
+Floors Travelled by A : 15
+Passengers Served by A : 5  
+
+Elevator B :
+0	1	goes up
+1	1	goes up
+2	1	goes up
+3	2	pick up passenger : 2
+4	2	stops
+5	2	goes down
+6	2	goes down
+7	1	drops off passenger : 2
+8	1	stops
+9	1	goes up
+10	1	goes up
+11	1	goes up
+12	2	goes up
+13	2	goes up
+14	3	picks up passenger : 6
+15	3	stops
+16	3	goes up
+17	3	goes up
+18	3	goes up
+19	4	goes up
+20	4	goes up
+21	5	goes up
+22	5	goes up
+23	6	goes up
+24	6	goes up
+25	7	picks up passenger : 9
+26	7	stops
+27	7	goes up
+28	7	goes up
+29	7	goes up
+30	8	goes up
+31	8	goes up	 
+32	9	goes up
+33	9	goes up
+34	10	drops off passenger : 6
+35	10	stops
+36	10	goes up 
+37	10	goes up
+38	10	goes up
+39	11	goes up (won't stop for 10, because different direction)
+40	11	goes up
+41	12	drops off passenger : 9
+42	12	stops
+43	12	goes down      (to pick passenger 11)
+44	12	goes down
+45	11	stops and waits for passenger 11
+46	11	stops
+47	11	stops
+48	11	stops
+49	11	stops
+50	11	stops
+51	11	picks up passenger : 11
+52	11	stops
+53	11	goes down
+54	11	goes down
+55	10	goes down
+56	9	drops off passenger : 11
+57	9	stops
+
+Floors Travelled by B : 17
+Passengers Served by B : 4
+
+Elevator C :
+0	1	goes up
+1	1	goes up
+2	1	goes up
+3	2	goes up
+4	2	goes up
+5	3	goes up
+6	3	goes up
+7	4	goes up
+8	4	goes up
+9	5	goes up
+10	5	goes up
+11	6	goes up
+12	6	goes up
+13	7	goes up
+14	7	goes up
+15	8	picks up passenger : 3   (Now elevator changes it's direction to down)
+16	8	stops
+17	8	goes down
+18	8	goes down
+19	7	goes down
+20	6	goes down
+21	5	goes down
+22	4	goes down
+23	3	picks up passenger : 10
+24	3	stops
+25	3	goes down
+26	3	goes down
+27	2	drops off passenger : 10
+28	2	stops
+29	2	goes down
+30	2	goes down
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				This is where the offline algorithm would differ
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+31	1	drops off passenger : 3 (the elevator would be empty and so is the waiting queue. So now it will start moving towards the next passenger who is coming in
+					 because we already know when and where he's gonna come, ahead of time)
+32	1	stops
+33	1	goes up
+34	1	goes up
+35	1	goes up         (Passenger 11 arrives at this time, so it goes to server him)
+36	2	goes up
+37	2	goes up
+38	3	goes up
+39	3	goes up
+40	4	goes up
+41	4	goes up
+42	5	goes up
+43	5	goes up
+44	6	goes up
+45	6	goes up
+46	7	goes up
+47	7	goes up
+48	8	goes up
+49	8	goes up
+50	9	goes up  (stops because passenger has been picked up)
+
+Floors Travelled by C : 18
+Passengers Served by C : 2 
