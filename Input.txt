@@ -20,4 +20,4 @@ ID  arr_time  arr_floor   Destination Floor                                     
 8    20          7            13                                              
 9    20          7            12                                                
 10   22          3             2                                          
-11   50		11	       9
+11   50		       11	           9
